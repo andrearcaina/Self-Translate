@@ -8,10 +8,49 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.element-container:nth-of-type(3) .button {
+    height: 3em;
+}
+
+.stButton > button:first-child {
+    background-color: #6dac32;
+    color: white;
+
+    border: none;
+    padding: 10px 20px;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    
+    cursor: pointer;
+
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #518125;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* The 3D button animation */
+.stButton:hover > button:first-child {
+    box-shadow: 0 9px 0 #518125;
+    transform: translateY(-4px);
+}
+
+.stButton:active > button:first-child {
+    box-shadow: 0 4px 0 #518125;
+    transform: translateY(2px);
+}
+
 .static {
     position: absolute;
     top: 10px;
+    
     color: #fff;
+    
     font-size: 60px;
     font-weight: 400;
 
@@ -27,10 +66,13 @@
 .dynamic li {
     list-style: none;
     color: #6dac32;
+    
     font-size: 60px;
     font-weight: 500;
+    
     position: relative;
     top: 0;
+    
     animation: slide 12s steps(4) infinite;
 }
 
@@ -42,6 +84,7 @@
 
 .dynamic li span {
     position: relative;
+    
     margin: 5px 0;
     line-height: 90px;
 }
@@ -49,11 +92,14 @@
 .dynamic li span::after {
     content: "";
     position: absolute;
+    
     left: 0;
     height: 100%;
     width: 100%;
+    
     background: #002b36;
     border-left: 5px solid #6dac32;
+    
     animation: typing 3s steps(10) infinite;
 }
 
@@ -66,5 +112,17 @@
 
     100% {
         left: 0;
+    }
+}
+
+p { animation: fade-top 3s forwards; }
+.stButton { animation: fade-top 3s forwards; }
+
+/* fade in animation onload */
+@keyframes fade-top {
+    from { opacity: 0; }
+    to { 
+        opacity: 1;
+        transform: translateY(-2px);
     }
 }
