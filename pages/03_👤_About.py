@@ -21,13 +21,15 @@ col1.subheader("< about />")
 col1.markdown(f'<h2> self.<span style="background-color:#002b36;color:#6dac32;font-size:46px;border-radius:100%;">{"translate"}</span> is... </h2>', unsafe_allow_html=True)
 
 col1.write('<p style="text-align:justify;"> a revolutionary translation application that can be utilized by users worldwide! This cutting-edge app has the ability to translate text from a vast collection of over 100 languages, while also providing support for sign language. With the incorporation of self.translate, learning, traveling, and socializing has never been easier. </p>', unsafe_allow_html=True)
-col1.write("\nMobile version incoming!")
+col1.write("\nIncoming mobile version in the future!")
 
-col1.subheader("\n\n< collaborators />")
-col1.write("[Andre](https://www.linkedin.com/in/andre-arcaina/)")
-col1.write("[Dominic](https://www.linkedin.com/in/dominicchen1/)")
-col1.write("[Justin](https://www.linkedin.com/in/justin-tran-028734254/)")
-col1.write("[Tao](https://www.linkedin.com/in/tao-wang-3b415724b/)")
+
+with st.sidebar:
+    st.subheader("\n\n< collaborators />")
+    st.write("🔥 [Andre Arcaina](https://www.linkedin.com/in/andre-arcaina/)")
+    st.write("☁️ [Dominic Chen](https://www.linkedin.com/in/dominicchen1/)")
+    st.write("💧 [Justin Tran](https://www.linkedin.com/in/justin-tran-028734254/)")
+    st.write("🌍 [Tao Wang](https://www.linkedin.com/in/tao-wang-3b415724b/)")
 
 col3.write("")
 col3.write("")

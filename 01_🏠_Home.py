@@ -33,7 +33,7 @@ utl.read_markdown(html)
 
 utl.read_css("frontend/streamlit.css")
 
-col1, col2 = st.columns([0.4,3])
+col1, col2 = st.columns([0.4,2.2])
 
 with col1:
     if st.button("translation"):

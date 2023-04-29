@@ -1,7 +1,9 @@
 import streamlit as st
 import sqlite3 as sql
+import numpy as np
 from googletrans import LANGUAGES
 from src.translate import translate_lang
+from src.camera import camera_recognition
 from src.utils import favicon
 
 st.set_page_config(
@@ -39,16 +41,14 @@ def regular_translate():
 
     target_lang = st.selectbox("Select target language", options=lang_names)
 
-    label = 'Enter text'
-
-    user_input = ""
-    user_input = st.text_input(label, value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder="enter text", disabled=False, label_visibility="visible")
+    user_input = st.text_area(label=f"Input text: ", value="", max_chars=4000, disabled=False, placeholder="enter text", label_visibility="visible")
 
     if not user_input == "":
         query = user_input
         language = languages.get(target_lang)
-        response = translate_lang(query, language)
-        st.text_input(label=f"Output in {target_lang}", value=f"{response}", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder="", disabled=True, label_visibility="visible")
+        response, lang_name = translate_lang(query, language)
+        st.text_area(label=f"Detected Language: {lang_name}", value=f"{query}", disabled=True, label_visibility="visible")
+        st.text_area(label=f"Language Output: {target_lang}", value=f"{response}", disabled=True, label_visibility="visible")
         return query, response
     return None, None
 
@@ -60,18 +60,19 @@ col1, col2 = st.columns([4,2.2])
 with col1:
     if page == 'Regular':
         query, response = regular_translate()
-        database, cursor = connect_database()
         if st.sidebar.button("Clear Translation Log"):
             clear_table()
 
     elif page == "Sign":
         st.write("Sign Language")
+        camera_recognition()
 
 with col2:
     # this needs to change so that the translation log refreshes when the entire web app refreshes
     # for now it only outputs the translated output when the user inputs something
     # this is because we are clearning the table everytime
     if page == 'Regular':
+        database, cursor = connect_database()
         st.write("Translation Log:")
         st.write("Input | Output")
         clear_table()
