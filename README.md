@@ -10,7 +10,7 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 - Download the zip folder and make sure you have all the requirements!
   - check requirements.txt for more information
 
-### ```Tools and Libraries``` ###
+### ```Language(s), Tools and Libraries``` ###
 - Python
 - Streamlit
 - Cohere
@@ -19,7 +19,6 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 - OpenCV
 - MediaPipe
 - SQLite
-
 
 ### ```Future Improvements```
 - enhance the hand recognition for sign language and increase accuracy!
