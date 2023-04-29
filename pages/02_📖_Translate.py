@@ -80,7 +80,11 @@ with col1:
         level = st.radio("Level", options=("Beginner", "Intermediate", "Advanced"))
         language = st.selectbox("Select target language", options=LANGUAGES.values())
 
-        prompt = f"I'm a {level} learner. Can you give me a lesson plan on how to learn {language}?"
+        if(level == "Beginner"):
+            prompt = f"I'm a {level} learner. Can you give me a lesson plan on how to learn {language}?"
+        else:
+            prompt = f"I'm an {level} learner. Can you give me a lesson plan on how to learn {language}?"
+            
         st.write("Prompt: "+ prompt)
 
         if st.button("Generate me a lesson plan"):
