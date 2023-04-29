@@ -17,7 +17,7 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 - OpenAI
 - Google Translate API
 - OpenCV
-- Mediapipe
+- MediaPipe
 - SQLite
 
 
