@@ -1,6 +1,5 @@
 import streamlit as st
 import sqlite3 as sql
-import numpy as np
 from googletrans import LANGUAGES
 from src.translate import translate_lang
 from src.camera import camera_recognition
@@ -64,7 +63,6 @@ with col1:
             clear_table()
 
     elif page == "Sign":
-        st.write("Sign Language")
         camera_recognition()
 
 with col2:
