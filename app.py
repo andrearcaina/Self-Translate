@@ -1,7 +1,24 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Translating App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+st.markdown(
+    f'<link rel="stylesheet" href="/styles.css">',
+    unsafe_allow_html=True,
+)
+
 st.write("""
-# Hello *World!*""")
+# Hello *World! yes*""")
 
 st.write("""
 # WE ARE GOING TO WIN THIS HACKAHTON **YES**""")
