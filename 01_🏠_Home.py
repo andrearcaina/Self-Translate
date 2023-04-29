@@ -20,7 +20,7 @@ html = """
             <li><span>translate</span></li>
             <li><span>traduire</span></li>
             <li><span>tradurre</span></li>
-            <li><span>txhais lus</span></li>
+            <li><span>traducir</span></li>
         </ul>
 </div>
 
