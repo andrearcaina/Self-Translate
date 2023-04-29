@@ -24,8 +24,8 @@ html = """
         </ul>
 </div>
 
-<p>Translate text in any language!</p>
-<p> or chat with a chatbot with any specified language :D </p>
+<p>Translate text in any language, or translate sign language through the webcam </p>
+<p> orrr get a beginner/intermediate/advanced lesson plan for a specified language :D </p>
 
 """
 

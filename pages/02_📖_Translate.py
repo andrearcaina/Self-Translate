@@ -1,14 +1,18 @@
+import openai
 import streamlit as st
 import sqlite3 as sql
 from googletrans import LANGUAGES
 from src.translate import translate_lang
 from src.camera import camera_recognition
 from src.utils import favicon
+from src.api import OPENAI_KEY
+
+openai.api_key = OPENAI_KEY
 
 st.set_page_config(
     page_title="Self.Translate",
     page_icon=favicon(),
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -51,7 +55,7 @@ def regular_translate():
         return query, response
     return None, None
 
-page = st.sidebar.selectbox(label='Options', options=('Regular', 'Sign'))
+page = st.sidebar.selectbox(label='Options', options=('Regular', 'Sign', 'Lesson'))
 
 
 col1, col2 = st.columns([4,2.2])
@@ -64,6 +68,28 @@ with col1:
 
     elif page == "Sign":
         camera_recognition()
+
+    elif page == "Lesson":
+        col1.markdown(f'<h2> self.<span style="background-color:#002b36;color:#6dac32;font-size:46px;border-radius:100%;">{"learn"}</span> </h2>', unsafe_allow_html=True)
+        level = st.radio("Level", options=("Beginner", "Intermediate", "Advanced"))
+        language = st.selectbox("Select target language", options=LANGUAGES.values())
+
+        prompt = f"I'm a {level} learner. Can you give me a lesson plan on how to learn {language}?"
+        st.write("Prompt: "+ prompt)
+
+        if st.button("Generate me a lesson plan"):
+            with st.spinner("Generating lesson plan..."):
+                response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt=prompt,
+                temperature=0.5,
+                max_tokens=3000,
+                n=1,
+                stop=None,
+            )
+            response = response.choices[0].text.strip().replace("please?", "")
+            st.write("This can be modified again! Just click the button above to generate a new lesson plan.")
+            st.text_area(label="",value=f"{response}", height=400 , disabled=False, label_visibility="visible")
 
 with col2:
     # this needs to change so that the translation log refreshes when the entire web app refreshes
