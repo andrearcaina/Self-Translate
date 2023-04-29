@@ -19,7 +19,7 @@ col1.subheader("< about />")
 
 col1.markdown(f'<h2> self.<span style="background-color:#002b36;color:#6dac32;font-size:46px;border-radius:100%;">{"translate"}</span> is... </h2>', unsafe_allow_html=True)
 
-col1.write("a revolutionary translation application that can be utilized by users worldwide! This cutting-edge app has the ability to translate text from a vast collection of over 100 languages, while also providing support for sign language. With the incorporation of self.translate, learning, traveling, and socializing has never been easier.")
+col1.write('<p style="text-align:justify;"> a revolutionary translation application that can be utilized by users worldwide! This cutting-edge app has the ability to translate text from a vast collection of over 100 languages, while also providing support for sign language. With the incorporation of self.translate, learning, traveling, and socializing has never been easier. </p>', unsafe_allow_html=True)
 col1.write("\nMobile version incoming!")
 
 col1.subheader("\n\n< collaborators />")
