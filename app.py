@@ -12,11 +12,6 @@ st.set_page_config(
     }
 )
 
-st.markdown(
-    f'<link rel="stylesheet" href="/styles.css">',
-    unsafe_allow_html=True,
-)
-
 st.write("""
 # Hello *World! yes*""")
 
