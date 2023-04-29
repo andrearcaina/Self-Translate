@@ -12,7 +12,7 @@ openai.api_key = OPENAI_KEY
 st.set_page_config(
     page_title="Self.Translate",
     page_icon=favicon(),
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -55,19 +55,25 @@ def regular_translate():
         return query, response
     return None, None
 
-page = st.sidebar.selectbox(label='Options', options=('Regular', 'Sign', 'Lesson'))
+page = st.sidebar.selectbox(label='Options', options=('Translate', 'Sign', 'Lesson'))
 
 
 col1, col2 = st.columns([4,2.2])
 
 with col1:
-    if page == 'Regular':
+    if page == 'Translate':
         query, response = regular_translate()
         if st.sidebar.button("Clear Translation Log"):
             clear_table()
 
     elif page == "Sign":
+        col1.markdown(f'<h2> self.<span style="background-color:#002b36;color:#6dac32;font-size:46px;border-radius:100%;">{"sign"}</span> </h2>', unsafe_allow_html=True)
         camera_recognition()
+        st.write("Work in Progress!")
+        st.write("""
+        So far: Uses webcam to detect hands.
+        Later: Implement a model to convert it to sign language.
+        """)
 
     elif page == "Lesson":
         col1.markdown(f'<h2> self.<span style="background-color:#002b36;color:#6dac32;font-size:46px;border-radius:100%;">{"learn"}</span> </h2>', unsafe_allow_html=True)
@@ -95,7 +101,7 @@ with col2:
     # this needs to change so that the translation log refreshes when the entire web app refreshes
     # for now it only outputs the translated output when the user inputs something
     # this is because we are clearning the table everytime
-    if page == 'Regular':
+    if page == 'Translate':
         database, cursor = connect_database()
         st.write("Translation Log:")
         st.write("Input | Output")
