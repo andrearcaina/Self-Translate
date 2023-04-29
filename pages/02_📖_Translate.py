@@ -2,10 +2,11 @@ import streamlit as st
 import sqlite3 as sql
 from googletrans import LANGUAGES
 from src.translate import translate_lang
+from src.utils import favicon
 
 st.set_page_config(
     page_title="Self.Translate",
-    page_icon="🦌",
+    page_icon=favicon(),
     layout="centered",
     initial_sidebar_state="expanded",
     menu_items={

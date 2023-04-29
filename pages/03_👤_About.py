@@ -1,9 +1,10 @@
 import streamlit as st
+from src.utils import favicon
 from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
     page_title="Self.Translate",
-    page_icon="🦌",
+    page_icon=favicon(),
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
@@ -25,15 +26,12 @@ col1.write("\nMobile version incoming!")
 col1.subheader("\n\n< collaborators />")
 col1.write("[Andre](https://www.linkedin.com/in/andre-arcaina/)")
 col1.write("[Dominic](https://www.linkedin.com/in/dominicchen1/)")
+col1.write("[Justin](https://www.linkedin.com/in/justin-tran-028734254/)")
 col1.write("[Tao](https://www.linkedin.com/in/tao-wang-3b415724b/)")
 
-
 col3.write("")
 col3.write("")
-col3.write("")
-col3.write("")
-col3.write("")
-col3.image("./logo.png")
+col3.image(favicon())
 
 if col4.button("Home"):
     switch_page("Home")

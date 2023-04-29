@@ -4,7 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
     page_title="Self.Translate",
-    page_icon="🦌",
+    page_icon=utl.favicon(),
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
