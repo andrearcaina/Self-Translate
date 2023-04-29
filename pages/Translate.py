@@ -2,23 +2,6 @@ import streamlit as st
 from googletrans import LANGUAGES
 from src.translate import translate_lang
 
-st.set_page_config(
-    page_title="Translating App",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
-st.markdown(
-    f'<link rel="stylesheet" href="/styles.css">',
-    unsafe_allow_html=True,
-)
-
 languages = {v: k for k, v in LANGUAGES.items()}
 
 lang_names = sorted(list(languages.keys()))
