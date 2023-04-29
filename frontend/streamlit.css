@@ -29,6 +29,7 @@
     
     cursor: pointer;
 
+    width: 160px;
     border-radius: 5px;
     box-shadow: 0 5px 0 #518125;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
