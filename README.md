@@ -19,6 +19,7 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 - Google Translate API
 - OpenCV
 - MediaPipe
+- Cvzone
 - SQLite
 
 ### ```Future Improvements```
