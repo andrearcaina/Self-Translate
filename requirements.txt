@@ -37,7 +37,7 @@ cycler==0.11.0
 debugpy==1.6.5
 decorator==5.1.1
 defusedxml==0.7.1
-discord==2.1.1
+discord==2.1.0
 dnspython==2.3.0
 docstring-to-markdown==0.12
 entrypoints==0.4
