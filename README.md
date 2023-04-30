@@ -21,8 +21,9 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 - SQLite
 
 ### ```Future Improvements```
-- enhance the hand recognition for sign language and increase accuracy!
-- make a mobile app for it!
+- enhance the hand recognition for sign language and increase the accuracy
+- make the Translations log work as intended
+- make a mobile app for it
 
 ### ```Developers``` ###
 - Andre Arcaina
