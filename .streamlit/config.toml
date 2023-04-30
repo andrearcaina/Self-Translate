@@ -1,7 +1,3 @@
-[keys]
-COHERE_KEY = "s5Q29HXmwNQtus2QOnx7otqHp7PqhIyu9gTkqe9w"
-OPENAI_KEY = "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"
-
 [theme]
 primaryColor="#d33682"
 backgroundColor="#002b36"
