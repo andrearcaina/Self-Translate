@@ -22,6 +22,7 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 
 ### ```Future Improvements```
 - enhance the hand recognition for sign language and increase the accuracy
+- voice recognition and drawing recognition for translation tool
 - create a mobile app and publish it for others to use
 - enhance the self.learn where the user can get the pdf version and flashcards
 
