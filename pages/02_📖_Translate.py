@@ -6,7 +6,7 @@ from src.translate import translate_lang
 from src.camera import camera_recognition
 from src.utils import favicon
 
-openai.api_key = st.secrets["OPENAI_KEY"]
+openai.api_key = st.secrets["keys"]["OPENAI_KEY"]
 
 st.set_page_config(
     page_title="Self.Translate",
