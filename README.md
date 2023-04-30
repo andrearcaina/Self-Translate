@@ -22,7 +22,6 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 
 ### ```Future Improvements```
 - enhance the hand recognition for sign language and increase the accuracy
-- make the Translations log work as intended
 - create a mobile app and publish it for others to use
 
 ### ```Developers``` ###
