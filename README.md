@@ -1,7 +1,7 @@
 ![icon](https://github.com/andrearcaina/Self-Translate/blob/main/frontend/imgs/meet.png)
 
 # ```self.translate``` is ...
-a revolutionary translation application that can be utilized by users worldwide! This cutting-edge app has the ability\
+a revolutionary translation web application that can be utilized by users worldwide! This cutting-edge app has the ability\
 to translate text from a vast collection of over 100 languages, while also providing support for sign language.\
 With the incorporation of **self.translate**, learning, traveling, and socializing has never been easier.
 - Created for DeerHacks2023
