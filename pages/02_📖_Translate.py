@@ -57,7 +57,6 @@ def regular_translate():
 
 page = st.sidebar.selectbox(label='Options', options=('Translate', 'Sign', 'Lesson'))
 
-
 col1, col2 = st.columns([4,2.2])
 
 with col1:
@@ -108,12 +107,12 @@ with col2:
     if page == 'Translate':
         database, cursor = connect_database()
         st.write("Translation Log:")
-        st.write("Input | Output")
-        clear_table()
-        cursor.execute("INSERT INTO translations VALUES (?, ?)", (query, response))
-        database.commit()
-        cursor.execute("SELECT * FROM translations")
-        for row in cursor.fetchall():
-            st.write(f"{row[0]} -> {row[1]}")
-        database.close()
+        st.write("Input -> Output")
+        if query != None and response != None:
+            cursor.execute("INSERT INTO translations VALUES (?, ?)", (query, response))
+            database.commit()
+            cursor.execute("SELECT * FROM translations")
+            for row in cursor.fetchall():
+                st.write(f"{row[0]} -> {row[1]}")
+            database.close()
 
