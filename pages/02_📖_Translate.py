@@ -12,12 +12,7 @@ st.set_page_config(
     page_title="Self.Translate",
     page_icon=favicon(),
     layout="centered",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
+    initial_sidebar_state="expanded"
 )
 
 def clear_table():

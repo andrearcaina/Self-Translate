@@ -7,11 +7,6 @@ st.set_page_config(
     page_icon=favicon(),
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
 )
 
 col1, col2, col3, col4= st.columns([3,1,2,1])
