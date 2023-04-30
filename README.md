@@ -13,7 +13,7 @@ With the incorporation of **self.translate**, learning, traveling, and socializi
 ### ```Language(s), Tools and Libraries``` ###
 - Python
 - Streamlit
-- Cohere
+- Co:here
 - OpenAI
 - Google Translate API
 - OpenCV
